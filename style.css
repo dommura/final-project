@@ -1,0 +1,25 @@
+p {
+
+
+
+}
+
+
+
+
+.grey{
+  background-color: #000;
+  padding: 20px;
+}
+
+/*----starting of footer----*/
+footer{
+     width: 100%;
+     background-color: #66cc99;
+     padding: 40px 0px;
+}
+/*----end of the footer-----*/
+.contact{
+  background-color: #33ffcc;
+  padding: 20px;
+}
