@@ -24,9 +24,29 @@
       background-color: #000;
       padding: 20px;
     }
+
+
+img {
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+    -webkit-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    margin-bottom:20px;
+    cursor: pointer;
+}
+
+img:hover {
+  filter: none; /* IE6-9 */
+  -webkit-filter: grayscale(0); /* Google Chrome, Safari 6+ & Opera 15+ */
+ 
+}
+
+
       </style>
   </head>
-  <body background-image:url(bg-children.jpg)
+
+  <body>
 
    <header>
       <div class="navbar navbar-default navbar-fixed-top navbar-inverse">
@@ -37,7 +57,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-              <a href="" class="navbar-brand">Final Project</a>
+              <a href="index.html" class="navbar-brand">Final Project</a>
           </div>
           <div class="collapse navbar-collapse" id="example">
             <ul class="nav navbar-nav">
@@ -60,140 +80,100 @@
 
      </div>
     </div>
+   </header>
 
-      <div class="jumbotron">
+<div id="banner" class="jumbotron">
+
+<div id="zoom"><img id="zoomimg" src="imagepoor/exotichouse-1.jpg"><img id="close" onmouseover="over(this.id)" onmouseout="out(this.id)" onMouseDown="clos(this.id)" src="imagepoor/Color Fill 1.png"></div>
+
         <div class="container">
           <h1>Gallery</h1>
-          <h3>countries</h3>
         </div>
       </div>
-    </header>
+        
 
-    <section id="slide">
-      <header class="page-header">
-        <h1>Slide Show -<small> Carousel de Imagens</small></h1>
-        </header>
-        <section class="carousel slide" id="carousel">
-          <div class="carousel-inner">
-            <figure class="active item">
-              <img src="Poor Children Img/slide/African Children.jpg" alt="African Children">
-              <figurecapition class="carousel-caption">
-                <h4></h4>
-              <p></p>
-            </figurecaption>
-          </figure>
-          <figure class="item">
-            <img src="Poor Children Img/slide/African Children.jpg" alt="African Children">
-            <figurecapition class="carousel-caption">
-              <h4></h4>
-            <p></p>
-          </figurecaption>
-        </figure>
-        <figure class="item">
-          <img src="Poor Children Img/slide/Brasil Children.jpg" alt="Brasil Children">
-          <figurecapition class="carousel-caption">
-            <h4></h4>
-          <p></p>
-        </figurecaption>
-      </figure>
-      <figure class="item">
-        <img src="Poor Children Img/slide/Indian Children.jpg" alt="Indian Children">
-        <figurecapition class="carousel-caption">
-          <h4></h4>
-        <p></p>
-      </figurecaption>
-    </figure>
-    <figure class="item">
-      <img src="Poor Children Img/slide/Syrian Children1.jpg" alt="Syrian Children1">
-      <figurecapition class="carousel-caption">
-        <h4></h4>
-      <p></p>
-    </figurecaption>
 
-  </figure>
-  <figure class="item">
-    <img src="Poor Children Img/slide/African Children1.jpg" alt="African Children1">
-    <figurecapition class="carousel-caption">
-      <h4></h4>
-    <p></p>
-  </figurecaption>
-</figure>
-<figure class="item">
-  <img src="Poor Children Img/slide/Brasil-SP Children.jpg" alt="Brasil-SP Children">
-  <figurecapition class="carousel-caption">
-    <h4></h4>
-  <p></p>
-</figurecaption>
-</figure>
-<figure class="item">
-  <img src="Poor Children Img/slide/Indonesian Children.jpg" alt="Indonesian Children">
-  <figurecapition class="carousel-caption">
-    <h4></h4>
-  <p></p>
-</figurecaption>
-</figure>
-<figure class="item">
-  <img src="Poor Children Img/slide/African Children2.jpg" alt="African Children2">
-  <figurecapition class="carousel-caption">
-    <h4></h4>
-  <p></p>
-</figurecaption>
-</figure>
-<figure class="item">
-  <img src="Poor Children Img/slide/Haiti_Children.jpg" alt="Haiti_Children">
-  <figurecapition class="carousel-caption">
-    <h4></h4>
-  <p></p>
-</figurecaption>
-</figure>
-<figure class="item">
-  <img src="Poor Children Img/slide/Syrian Children.jpg" alt="Syrian Children">
-  <figurecapition class="carousel-caption">
-    <h4></h4>
-  <p></p>
-</figurecaption>
-</figure>
-          </div>
-          <a href="#carousel" class="carousel-control left" data-slide="prev">&lsaquo;</a>
-          <a href="#carousel" class="carousel-control right" data-slide="next">&rsaquo;</a>
-</section>
+        <div class="container">
+  <div class="row">
+    <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" id="1" onclick="zoom(this.id)" src="imagepoor/syrian_children1.jpg" /></div>
 
-</section>
+    <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" id="2" onclick="zoom(this.id)" src="imagepoor/brasil-sp_children.jpg" /></div>    
 
-<footer>
-  <div class="container">
-    <hr>
+    <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" id="3" onclick="zoom(this.id)" src="imagepoor/african_children2.jpg" /></div>    
 
-    <p>
-      <small><a href="http://facebook.com/dommuraz">Like me</a> On facebook</small></p>
-    <p><small><a href="https://twitter.com/dommura1">Ask whatever </a> On Twitter</small></p>
-    <p><small><a href="https://www.youtube.com/channel/UCVOevLHGKLgcF3sui49wNJg">Subscribe me</a> On youtube</small></p>
-  </div> <!--end container -->
+    <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" id="4" onclick="zoom(this.id)" src="imagepoor/brasil_children.jpg" /></div>    
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-11">
-       <button href="#top" id="JSscript.jsBtn" class="btn btn-xs">Back To Top</button>
-     </div>
+    <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" id="5" onclick="zoom(this.id)" src="imagepoor/haiti_children.jpg" /></div>    
+
+    <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" id="6" onclick="zoom(this.id)" src="imagepoor/indonesian_children.jpg" /></div>    
+
+    <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" id="7" onclick="zoom(this.id)" src="imagepoor/syrian_children.jpg" /></div>    
+
+    <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" id="8" onclick="zoom(this.id)" src="imagepoor/syrian_children1.jpg" /></div>
     </div>
+</div>
+<br>
+
+
+  <footer>
+<section id="foot"><div>
+  <h3>Lorem ipsum</h3>
+  <ul>
+    <li><a href="#">Lorem ipsum</a></li>
+    <li><a href="#">amet, massa</a></li>
+    <li><a href="#">vel pharetra</a></li>
+  </ul></div>
+<div>
+  <h3>Lorem ipsum</h3>
+    <ul>
+    <li><a href="#">Lorem ipsum</a></li>
+    <li><a href="#">amet, massa</a></li>
+    <li><a href="#">vel pharetra</a></li>
+  </ul></div>
+  <div>
+  <h3> Pages </h3>
+    <ul>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Gallery</a></li>
+    <li><a href="#">Donate</a></li>
+    <li><a href="#">Contact Us</a></li>
+  </ul>
+
+  
   </div>
 
-  <form action="" class="navbar-form navbar-right" role="search">
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="serch this out">
- </div>
- <button type="text" class="btn btn-primary">Submit</button>
-</form>
+    <div>
+  <h3> Pages </h3>
+    <ul>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Gallery</a></li>
+    <li><a href="#">Donate</a></li>
+    <li><a href="#">Contact Us</a></li>
+  </ul>
 
-</footer>
+  <a href="#"><img border="0" alt="facebook" src="imagepoor/facebook.png" width="20" height="20">
+  </a>
+  <a href="#"><img border="0" alt="twitter" src="imagepoor/twitter.png" width="20" height="20">
+  </a>
+  <a href="#"><img border="0" alt="pinterst" src="imagepoor/pinter.png" width="20" height="20">
+  </a>
+  <a href="#"><img border="0" alt="Google+" src="imagepoor/gooplus.png" width="20" height="20">
+  </a>
+  
+  </div>
 
 
 
+  </section>
+   <a id="back" href="#">Back to Top</a>
+    </footer>
+    
 
-
-
-
-
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="JSscript.js"></script>
+<script src="js/bootstrap.min.js"></script>
 
 </body>
 </html>
